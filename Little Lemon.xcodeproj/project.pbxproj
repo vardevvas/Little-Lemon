@@ -15,6 +15,8 @@
 		411966782AAEABF4006BC3CB /* Little_LemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411966772AAEABF4006BC3CB /* Little_LemonUITests.swift */; };
 		4119667A2AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411966792AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift */; };
 		41E0E46E2AAEB76C0083BD1D /* MenuItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */; };
+		41E0E4762AAF88FF0083BD1D /* MenuItemsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E4752AAF88FF0083BD1D /* MenuItemsOptionView.swift */; };
+		41E0E4782AAF896F0083BD1D /* MenuItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E4772AAF896F0083BD1D /* MenuItemDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		411966772AAEABF4006BC3CB /* Little_LemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonUITests.swift; sourceTree = "<group>"; };
 		411966792AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsView.swift; sourceTree = "<group>"; };
+		41E0E4752AAF88FF0083BD1D /* MenuItemsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsOptionView.swift; sourceTree = "<group>"; };
+		41E0E4772AAF896F0083BD1D /* MenuItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,9 @@
 			children = (
 				4119665B2AAEABF2006BC3CB /* Little_LemonApp.swift */,
 				4119665D2AAEABF2006BC3CB /* ContentView.swift */,
+				41E0E4772AAF896F0083BD1D /* MenuItemDetailsView.swift */,
 				41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */,
+				41E0E4752AAF88FF0083BD1D /* MenuItemsOptionView.swift */,
 				4119665F2AAEABF4006BC3CB /* Assets.xcassets */,
 				411966612AAEABF4006BC3CB /* Little_Lemon.entitlements */,
 				411966622AAEABF4006BC3CB /* Preview Content */,
@@ -265,6 +271,8 @@
 				4119665E2AAEABF2006BC3CB /* ContentView.swift in Sources */,
 				41E0E46E2AAEB76C0083BD1D /* MenuItemsView.swift in Sources */,
 				4119665C2AAEABF2006BC3CB /* Little_LemonApp.swift in Sources */,
+				41E0E4762AAF88FF0083BD1D /* MenuItemsOptionView.swift in Sources */,
+				41E0E4782AAF896F0083BD1D /* MenuItemDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
