@@ -14,6 +14,7 @@
 		4119666E2AAEABF4006BC3CB /* Little_LemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4119666D2AAEABF4006BC3CB /* Little_LemonTests.swift */; };
 		411966782AAEABF4006BC3CB /* Little_LemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411966772AAEABF4006BC3CB /* Little_LemonUITests.swift */; };
 		4119667A2AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411966792AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift */; };
+		41E0E46E2AAEB76C0083BD1D /* MenuItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		411966732AAEABF4006BC3CB /* Little LemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Little LemonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		411966772AAEABF4006BC3CB /* Little_LemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonUITests.swift; sourceTree = "<group>"; };
 		411966792AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				4119665B2AAEABF2006BC3CB /* Little_LemonApp.swift */,
 				4119665D2AAEABF2006BC3CB /* ContentView.swift */,
+				41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */,
 				4119665F2AAEABF4006BC3CB /* Assets.xcassets */,
 				411966612AAEABF4006BC3CB /* Little_Lemon.entitlements */,
 				411966622AAEABF4006BC3CB /* Preview Content */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4119665E2AAEABF2006BC3CB /* ContentView.swift in Sources */,
+				41E0E46E2AAEB76C0083BD1D /* MenuItemsView.swift in Sources */,
 				4119665C2AAEABF2006BC3CB /* Little_LemonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
