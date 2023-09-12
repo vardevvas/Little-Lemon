@@ -15,22 +15,23 @@ struct MenuItemsOptionView: View {
         ]
 
     var body: some View {
-        Text("Filter")
-        List{
-            Section(header: Text("SELECTED CATEGORIES")){
-                List {
-                        Text("Food")
-                        Text("Drink")
-                        Text("Desert")
+        NavigationView{
+            List{
+                Section(header: Text("SELECTED CATEGORIES")){
+                    List {
+                            Text("Food")
+                            Text("Drink")
+                            Text("Desert")
+                    }
                 }
-            }
-            Section(header: Text("Sort By")){
-                List {
-                    Text("Most Popular")
-                    Text("Price $-$$$")
-                    Text("A-Z")
+                Section(header: Text("Sort By")){
+                    List {
+                        Text("Most Popular")
+                        Text("Price $-$$$")
+                        Text("A-Z")
+                    }
                 }
-            }
+            }.navigationTitle("Filter")
         }
     }
 }

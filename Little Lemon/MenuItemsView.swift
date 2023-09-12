@@ -39,38 +39,39 @@ struct MenuItemsView: View {
         ]
 
     var body: some View {
-        List{
-            Section(header: Text("Food")) {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHGrid(rows: columns, spacing: 16) {
-                        ForEach(0..<5) { index in
-                            GridItemView(imageName: "photo", title: "Item \(index + 1)")
+        NavigationView{
+            List{
+                Section(header: Text("Food")) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHGrid(rows: columns, spacing: 16) {
+                            ForEach(0..<5) { index in
+                                GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                            }
                         }
+                        .padding(16)
                     }
-                    .padding(16)
                 }
-            }
-            Section(header: Text("Drinks")) {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHGrid(rows: columns, spacing: 16) {
-                        ForEach(0..<5) { index in
-                            GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                Section(header: Text("Drinks")) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHGrid(rows: columns, spacing: 16) {
+                            ForEach(0..<5) { index in
+                                GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                            }
                         }
+                        .padding(16)
                     }
-                    .padding(16)
                 }
-            }
-            Section(header: Text("Desert")) {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHGrid(rows: columns, spacing: 16) {
-                        ForEach(0..<5) { index in
-                            GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                Section(header: Text("Desert")) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHGrid(rows: columns, spacing: 16) {
+                            ForEach(0..<5) { index in
+                                GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                            }
                         }
+                        .padding(16)
                     }
-                    .padding(16)
                 }
-            }
-
+            }.navigationTitle("Menu")
         }
     }
 }
