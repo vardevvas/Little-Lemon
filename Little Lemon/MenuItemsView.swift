@@ -16,7 +16,7 @@ struct GridItemView: View {
             Image(systemName: imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
+                .frame(width: 50, height: 50)
                 .padding(8)
             
             Text(title)
@@ -30,6 +30,7 @@ struct GridItemView: View {
 
 
 struct MenuItemsView: View {
+    @State private var isFilterViewPresented = false
 
     
     let columns: [GridItem] = [
@@ -39,39 +40,55 @@ struct MenuItemsView: View {
         ]
 
     var body: some View {
-        NavigationView{
-            List{
-                Section(header: Text("Food")) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: columns, spacing: 16) {
-                            ForEach(0..<5) { index in
-                                GridItemView(imageName: "photo", title: "Item \(index + 1)")
-                            }
-                        }
-                        .padding(16)
-                    }
+        
+        VStack{
+                Button(action: {
+                    isFilterViewPresented.toggle()
+                }) {
+                    Image(systemName: "line.horizontal.3.decrease.circle")
                 }
-                Section(header: Text("Drinks")) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: columns, spacing: 16) {
-                            ForEach(0..<5) { index in
-                                GridItemView(imageName: "photo", title: "Item \(index + 1)")
-                            }
-                        }
-                        .padding(16)
-                    }
+                .sheet(isPresented: $isFilterViewPresented) {
+                    MenuItemsOptionView(isPresented: isFilterViewPresented)
                 }
-                Section(header: Text("Desert")) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHGrid(rows: columns, spacing: 16) {
-                            ForEach(0..<5) { index in
-                                GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                .background(.red)
+                .offset(x: 100, y: 100)
+            NavigationView{
+                
+                List{
+                        
+                    Section(header: Text("Food")) {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            LazyVGrid(columns: columns, spacing: 16) {
+                                ForEach(0..<12) { index in
+                                    GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                                }
                             }
+                            .padding(16)
                         }
-                        .padding(16)
                     }
-                }
-            }.navigationTitle("Menu")
+                    Section(header: Text("Drinks")) {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            LazyVGrid(columns: columns, spacing: 16) {
+                                ForEach(0..<8) { index in
+                                    GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                                }
+                            }
+                            .padding(16)
+                        }
+                    }
+                    Section(header: Text("Desert")) {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            LazyVGrid(columns: columns, spacing: 16) {
+                                ForEach(0..<4) { index in
+                                    GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                                }
+                            }
+                            .padding(16)
+                        }
+                    }
+                
+                }.navigationTitle("Menu")
+            }
         }
     }
 }

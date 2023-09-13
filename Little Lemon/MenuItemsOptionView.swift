@@ -8,31 +8,52 @@
 import SwiftUI
 
 struct MenuItemsOptionView: View {
-    let columns: [GridItem] = [
-            GridItem(.flexible(), spacing: 16),
-            GridItem(.flexible(), spacing: 16),
-            GridItem(.flexible(), spacing: 16)
-        ]
+    
+    @State var isPresented: Bool = false
+    @State private var selectedOption: String = "All"
 
     var body: some View {
-        NavigationView{
-            List{
-                Section(header: Text("SELECTED CATEGORIES")){
-                    List {
-                            Text("Food")
-                            Text("Drink")
-                            Text("Desert")
+        VStack{
+            NavigationView{
+                List{
+                    Section(header: Text("SELECTED CATEGORIES")){
+                        List {
+                                Text("Food")
+                                Text("Drink")
+                                Text("Desert")
+                        }
                     }
-                }
-                Section(header: Text("Sort By")){
-                    List {
-                        Text("Most Popular")
-                        Text("Price $-$$$")
-                        Text("A-Z")
+                    Section(header: Text("Sort By")){
+                        List {
+                            Text("Most Popular")
+                            Text("Price $-$$$")
+                            Text("A-Z")
+                        }
                     }
-                }
-            }.navigationTitle("Filter")
+                    Button("Apply Filters") {
+                        // Implement filter logic here
+                        // You can access the selectedOption and other filter controls
+                        // and apply your filtering to your main content
+                        isPresented = false // Close the filter view
+                    }
+                    .padding()
+                    
+                    Button("Clear Filters") {
+                        // Implement logic to clear filters
+                        // Reset filter options to their initial state
+                        selectedOption = "All"
+                        // You can add more code to clear other filter controls
+                    }
+                    .foregroundColor(.red)
+                    .padding()
+
+                }.navigationTitle("Filter")
+            }
         }
+        .background(Color.white)
+        .cornerRadius(10)
+        .padding()
+
     }
 }
 
