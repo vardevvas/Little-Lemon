@@ -16,15 +16,13 @@ struct GridItemView: View {
             Image(systemName: imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50)
-                .padding(8)
+                .frame(width: 80, height: 80)
+                .padding(5)
+                .background(Color.black)
             
             Text(title)
                 .font(.headline)
         }
-        .frame(maxWidth: .infinity)
-        .background(Color.blue)
-        .cornerRadius(8)
     }
 }
 
@@ -40,56 +38,48 @@ struct MenuItemsView: View {
         ]
 
     var body: some View {
-        
-        VStack{
-                Button(action: {
-                    isFilterViewPresented.toggle()
-                }) {
-                    Image(systemName: "line.horizontal.3.decrease.circle")
+            NavigationStack {
+                ScrollView{
+                    VStack(alignment: .leading){
+                        Section(header: Text("Food").font(.title)) {
+                                LazyVGrid(columns: columns, spacing: 16) {
+                                    ForEach(0..<12) { index in
+                                        GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                                    }
+                                }
+                            
+                        }
+                        Section(header: Text("Drinks").font(.title)) {
+                                LazyVGrid(columns: columns, spacing: 16) {
+                                    ForEach(0..<8) { index in
+                                        GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                                    }
+                                }
+                        }
+                        Section(header: Text("Desert").font(.title)) {
+                                LazyVGrid(columns: columns, spacing: 16) {
+                                    ForEach(0..<4) { index in
+                                        GridItemView(imageName: "photo", title: "Item \(index + 1)")
+                                    }
+                                }
+                        }
+
+                    }
+                    .padding()
                 }
-                .sheet(isPresented: $isFilterViewPresented) {
-                    MenuItemsOptionView(isPresented: isFilterViewPresented)
+                .navigationTitle("Menu")
+                .toolbar {
+                    Button(action: {
+                        isFilterViewPresented.toggle()
+                    }) {
+                        Image(systemName: "line.horizontal.3.decrease.circle")
+                    }
+                    .sheet(isPresented: $isFilterViewPresented) {
+                        MenuItemsOptionView(isPresented: isFilterViewPresented)
+                    }
                 }
-                .background(.red)
-                .offset(x: 100, y: 100)
-            NavigationView{
-                
-                List{
-                        
-                    Section(header: Text("Food")) {
-                        ScrollView(.vertical, showsIndicators: false) {
-                            LazyVGrid(columns: columns, spacing: 16) {
-                                ForEach(0..<12) { index in
-                                    GridItemView(imageName: "photo", title: "Item \(index + 1)")
-                                }
-                            }
-                            .padding(16)
-                        }
-                    }
-                    Section(header: Text("Drinks")) {
-                        ScrollView(.vertical, showsIndicators: false) {
-                            LazyVGrid(columns: columns, spacing: 16) {
-                                ForEach(0..<8) { index in
-                                    GridItemView(imageName: "photo", title: "Item \(index + 1)")
-                                }
-                            }
-                            .padding(16)
-                        }
-                    }
-                    Section(header: Text("Desert")) {
-                        ScrollView(.vertical, showsIndicators: false) {
-                            LazyVGrid(columns: columns, spacing: 16) {
-                                ForEach(0..<4) { index in
-                                    GridItemView(imageName: "photo", title: "Item \(index + 1)")
-                                }
-                            }
-                            .padding(16)
-                        }
-                    }
-                
-                }.navigationTitle("Menu")
             }
-        }
+        
     }
 }
 

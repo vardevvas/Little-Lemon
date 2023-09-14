@@ -10,52 +10,73 @@ import SwiftUI
 struct MenuItemsOptionView: View {
     
     @State var isPresented: Bool = false
-    @State private var selectedOption: String = "All"
+    @Environment (\.presentationMode) var presentationMode
+    
+    enum SELECTED_CATEGORIES: String, CaseIterable {
+        case food = "Food"
+        case drink = "Drink"
+        case desert = "Desert"
+    }
+    enum Sort_By: String, CaseIterable {
+        case popularity = "Most Popular"
+        case price = "Price $-$$$"
+        case alphabetically = "A-Z"
+    }
 
     var body: some View {
-        VStack{
-            NavigationView{
+            NavigationStack{
+                CustomNavigationViewTitle(text: "Filter").bold()
                 List{
                     Section(header: Text("SELECTED CATEGORIES")){
-                        List {
-                                Text("Food")
-                                Text("Drink")
-                                Text("Desert")
+                        ForEach(SELECTED_CATEGORIES.allCases, id: \.self){
+                            category in Text(category.rawValue)
                         }
                     }
                     Section(header: Text("Sort By")){
-                        List {
-                            Text("Most Popular")
-                            Text("Price $-$$$")
-                            Text("A-Z")
+                        ForEach(Sort_By.allCases, id: \.self){
+                            sort in Text(sort.rawValue)
                         }
                     }
-                    Button("Apply Filters") {
-                        // Implement filter logic here
-                        // You can access the selectedOption and other filter controls
-                        // and apply your filtering to your main content
-                        isPresented = false // Close the filter view
+                }
+                .toolbar {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("Done")
                     }
-                    .padding()
-                    
-                    Button("Clear Filters") {
-                        // Implement logic to clear filters
-                        // Reset filter options to their initial state
-                        selectedOption = "All"
-                        // You can add more code to clear other filter controls
-                    }
-                    .foregroundColor(.red)
-                    .padding()
-
-                }.navigationTitle("Filter")
+                }
             }
-        }
-        .background(Color.white)
-        .cornerRadius(10)
-        .padding()
-
     }
 }
+struct CustomNavigationViewTitle: View {
+    var text: String
+    
+    var body: some View {
+        Text(text)
+            .font(.largeTitle)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal)
+            .background(NavigationConfigurator { nc in
+                nc.navigationBar.scrollEdgeAppearance?.titleTextAttributes = [.foregroundColor: UIColor.clear]
+                nc.navigationBar.scrollEdgeAppearance?.backgroundColor = .clear
+            })
+    }
+}
+
+struct NavigationConfigurator: UIViewControllerRepresentable {
+    var configure: (UINavigationController) -> Void = { _ in }
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<NavigationConfigurator>) -> UIViewController {
+        UIViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<NavigationConfigurator>) {
+        if let nc = uiViewController.navigationController {
+            self.configure(nc)
+        }
+    }
+}
+
 
 #Preview {
     MenuItemsOptionView()
