@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MenuItemDetailsView: View {
+    
+    let menuItem: MenuItem
+    
     var body: some View {
         NavigationView{
             VStack {
@@ -17,25 +20,26 @@ struct MenuItemDetailsView: View {
                     .frame(width: 300, height: 300)
                     .padding(8)
                 
-                Text("title:")
+                Text("Title: \(menuItem.title)")
                     .font(.headline)
-                Text("PlaceholderContentView(Data())")
-                Text("ordered:")
+                Text("Orders Count: \(menuItem.ordersCount)")
+                    .font(.subheadline)
+                Text("Ingredients:")
                     .font(.headline)
-                Text("PlaceholderContentView(Data())")
-                Text("ingredient:")
-                    .font(.headline)
-                Text("PlaceholderContentView(Data())")
+                // Display ingredients as a list
+                ForEach(menuItem.ingredients, id: \.rawValue){
+                    ingredient in Text(ingredient.rawValue)
+                }
+                
+                .frame(maxWidth: .infinity)
+                //        .background(Color.blue)
+                .cornerRadius(8)
+                .navigationTitle(menuItem.title)
             }
-            .frame(maxWidth: .infinity)
-    //        .background(Color.blue)
-            .cornerRadius(8)
-            .navigationTitle("Food 5")
         }
-
     }
 }
 
-#Preview {
-    MenuItemDetailsView()
-}
+//#Preview {
+//    MenuItemDetailsView(menuItem: )
+//}

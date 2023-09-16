@@ -6,8 +6,20 @@
 //
 
 import XCTest
+@testable import Little_Lemon
 
 final class Little_LemonTests: XCTestCase {
+    
+    func testMenuItemTitle() {
+            let menuItem = MenuItem(title: "Test Title", menuCategory: .food, ordersCount: 0, price: 0.0, ingredients: [])
+            XCTAssertEqual(menuItem.title, "Test Title")
+        }
+    func testMenuItemIngredients() {
+            let ingredients: [Ingredient] = [.spinach, .carrot]
+            let menuItem = MenuItem(title: "Test Item", menuCategory: .food, ordersCount: 0, price: 0.0, ingredients: ingredients)
+            XCTAssertEqual(menuItem.ingredients, ingredients)
+        }
+
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
