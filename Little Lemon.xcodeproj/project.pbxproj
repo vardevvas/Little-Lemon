@@ -16,7 +16,6 @@
 		4119667A2AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411966792AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift */; };
 		41A7E88D2AB2F841003DE3FB /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7E88C2AB2F841003DE3FB /* MenuCategory.swift */; };
 		41A7E88F2AB2F88C003DE3FB /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7E88E2AB2F88C003DE3FB /* Ingredient.swift */; };
-		41A7E8912AB2FE56003DE3FB /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7E8902AB2FE56003DE3FB /* Mock.swift */; };
 		41E0E46E2AAEB76C0083BD1D /* MenuItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */; };
 		41E0E4762AAF88FF0083BD1D /* MenuItemsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E4752AAF88FF0083BD1D /* MenuItemsOptionView.swift */; };
 		41E0E4782AAF896F0083BD1D /* MenuItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E0E4772AAF896F0083BD1D /* MenuItemDetailsView.swift */; };
@@ -53,7 +52,6 @@
 		411966792AAEABF4006BC3CB /* Little_LemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		41A7E88C2AB2F841003DE3FB /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		41A7E88E2AB2F88C003DE3FB /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		41A7E8902AB2FE56003DE3FB /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
 		41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsView.swift; sourceTree = "<group>"; };
 		41E0E4752AAF88FF0083BD1D /* MenuItemsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsOptionView.swift; sourceTree = "<group>"; };
 		41E0E4772AAF896F0083BD1D /* MenuItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailsView.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 				4119665D2AAEABF2006BC3CB /* ContentView.swift */,
 				41E0E4772AAF896F0083BD1D /* MenuItemDetailsView.swift */,
 				41E0E46D2AAEB76C0083BD1D /* MenuItemsView.swift */,
-				41A7E8902AB2FE56003DE3FB /* Mock.swift */,
 				41E0E4752AAF88FF0083BD1D /* MenuItemsOptionView.swift */,
 				4119665F2AAEABF4006BC3CB /* Assets.xcassets */,
 				411966612AAEABF4006BC3CB /* Little_Lemon.entitlements */,
@@ -284,7 +281,6 @@
 				41E0E4762AAF88FF0083BD1D /* MenuItemsOptionView.swift in Sources */,
 				41A7E88D2AB2F841003DE3FB /* MenuCategory.swift in Sources */,
 				41E0E4782AAF896F0083BD1D /* MenuItemDetailsView.swift in Sources */,
-				41A7E8912AB2FE56003DE3FB /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +454,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Coursera.Little-Lemon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,10 +492,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Coursera.Little-Lemon";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -520,8 +516,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AHQFUJ5K57;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Coursera.Little-LemonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -543,8 +539,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AHQFUJ5K57;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Coursera.Little-LemonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
