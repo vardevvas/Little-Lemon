@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MenuItemDetailsView: View {
     
-    let menuItem: MenuItem
+    @Binding var menuItem: MenuItem
     
     var body: some View {
         NavigationView{
@@ -34,7 +34,6 @@ struct MenuItemDetailsView: View {
                 .frame(maxWidth: .infinity)
                 //        .background(Color.blue)
                 .cornerRadius(8)
-                .navigationTitle(menuItem.title)
             }
         }
     }
