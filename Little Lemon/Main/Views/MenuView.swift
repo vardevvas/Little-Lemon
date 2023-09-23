@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct MenuItemsView: View {
+struct MenuView: View {
     @ObservedObject private var viewModel = MenuViewViewModel()
     @State private var isFilterViewPresented = false
 
