@@ -111,6 +111,10 @@
 		4119665A2AAEABF2006BC3CB /* Little Lemon */ = {
 			isa = PBXGroup;
 			children = (
+				4119665B2AAEABF2006BC3CB /* Little_LemonApp.swift */,
+				411966612AAEABF4006BC3CB /* Little_Lemon.entitlements */,
+				4119665F2AAEABF4006BC3CB /* Assets.xcassets */,
+				411966622AAEABF4006BC3CB /* Preview Content */,
 				418B80902ABEDCD10008A90B /* App */,
 				418B808F2ABEDCB30008A90B /* Main */,
 			);
@@ -185,10 +189,7 @@
 		418B80902ABEDCD10008A90B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				411966612AAEABF4006BC3CB /* Little_Lemon.entitlements */,
-				4119665F2AAEABF4006BC3CB /* Assets.xcassets */,
 				418B80912ABEDCDE0008A90B /* Model */,
-				411966622AAEABF4006BC3CB /* Preview Content */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -196,7 +197,6 @@
 		418B80912ABEDCDE0008A90B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4119665B2AAEABF2006BC3CB /* Little_LemonApp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -504,6 +504,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_FILE[sdk=*]" = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

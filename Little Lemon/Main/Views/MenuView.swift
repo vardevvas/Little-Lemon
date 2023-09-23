@@ -118,5 +118,5 @@ struct MenuView: View {
 }
 
 #Preview {
-    MenuItemsView()
+    MenuView()
 }
